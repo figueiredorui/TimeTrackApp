@@ -1,4 +1,4 @@
 TimeTrackApp
 ============
 
-TimeTrack Android App
+Android App using cordova
