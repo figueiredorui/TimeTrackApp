@@ -1,0 +1,40 @@
+
+<ion-view title="Time Entry">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear icon-left ion-ios7-checkmark-empty" ng-click="saveTimeEntry(myForm.$valid)">
+            Save
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <form name="myForm">
+            <div class="list list-inset">
+                <label class="item item-input item-select">
+                    <span class="input-label">Date</span>
+                    <i ng-show="myForm.Date.$error.required" class="icon ion-alert-circled error"></i>
+                    <input type="date" name="Date" ng-model='TimeEntry.Date' required="required" />
+                </label>
+                <label class="item item-input item-select">
+                    <span class="input-label">Customer</span>
+                    <i ng-show="myForm.Category.$error.required" class="icon ion-alert-circled error"></i>
+                    <select ng-model="TimeEntry.CustomerID" name="CustomerID" ng-options="t.CustomerID as t.CustomerName for t in Customers"></select>
+                </label>
+                <label class="item item-input item-select">
+                    <span class="input-label">Task</span>
+                    <i ng-show="myForm.Category.$error.required" class="icon ion-alert-circled error"></i>
+                    <select ng-model="TimeEntry.TaskID" name="TaskID" ng-options="t.TaskID as t.TaskDescription for t in Tasks"></select>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Hours</span>
+                    <i ng-show="myForm.Hours.$error.required" class="icon ion-alert-circled error"></i>
+                    <input type='number' name="Hours" style="text-align:right" ng-model='TimeEntry.Hours' required="required" />
+                </label>
+                <label class="item item-input">
+                    <textarea ng-model="TimeEntry.Notes" name="Notes" placeholder="Notes" rows="3"></textarea>
+                </label>
+                <div class="padding assertive">
+                    <span>{{errorMsg}}</span>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

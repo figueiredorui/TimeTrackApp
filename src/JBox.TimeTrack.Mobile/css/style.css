@@ -1,0 +1,45 @@
+.col.center {
+    padding: 5px;
+    width: 100%;
+    /*border: 1px solid #ddd;*/
+    border-radius: 2px;
+    /*background: #f7f7f7;*/
+    text-align: center;
+}
+
+.app-bg-image {
+    background: transparent url(../images/icon_6731.png) no-repeat center center;
+    background-size: 150px 150px;
+    height: 150px;
+}
+
+.item-left-image {
+    background: transparent url(../images/avatar2.png) no-repeat center center;
+    background-size: 40px 40px;
+    height: 40px;
+    border: 0px;
+}
+
+.app-item-note {
+    /* float: right; */
+    position: absolute;
+    color: #aaa;
+    font-size: 14px;
+    right: 35px;
+    top: 45px;
+}
+
+
+.button-medium {
+    padding: 2px 4px 1px;
+    min-width: 38px;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+    .button-medium .icon:before, .button-medium.icon:before, .button-medium.icon-left:before, .button-medium.icon-right:before {
+        font-size: 20px;
+        line-height: 32px;
+        margin-top: 3px;
+    }

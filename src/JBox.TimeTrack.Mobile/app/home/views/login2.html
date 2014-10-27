@@ -1,0 +1,31 @@
+<ion-view title="Login" hide-back-button="true">
+    <ion-content class="has-header">
+        <div class="row">
+            <div class="col center">
+                <h1>Time Track </h1>
+            </div>
+        </div>
+        <div class="row row-center">
+            <div class="col center app-bg-image">
+            </div>
+        </div>
+        <form ng-submit="doLogin()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="loginData.username">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="loginData.password">
+                </label>
+                <div class="padding">
+                    <button class="button button-block button-positive" type="submit">Log in</button>
+                </div>
+                <div class="padding assertive">
+                    <span>{{errorMsg}}</span>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
